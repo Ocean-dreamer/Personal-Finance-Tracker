@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 interface User {
+  id?: string;
   name: string;
   email: string;
   password: string;
@@ -13,6 +14,7 @@ interface RegisterResponse {
   success: boolean;
   message: string;
   user?: User;
+  token?: string;
 }
 
 const defaultAvatars = {
